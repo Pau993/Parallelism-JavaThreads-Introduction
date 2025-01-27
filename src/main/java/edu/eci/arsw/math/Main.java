@@ -7,6 +7,8 @@ package edu.eci.arsw.math;
 
 import java.util.Arrays;
 
+import edu.eci.arsw.threads.CountThread;
+
 /**
  *
  * @author hcadavid
@@ -17,6 +19,9 @@ public class Main {
         System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 100)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000)));
+
+
+
     }
 
     private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
