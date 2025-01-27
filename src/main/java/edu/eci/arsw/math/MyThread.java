@@ -20,18 +20,31 @@ public class MyThread extends Thread {
         return result;
     }
 
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args){
         int start = 0;
         int count = 1000;
 
+
+        //Primer estado, creación del hilo
         MyThread hilo = new MyThread(start, count);
+        //Segundo estado, estado ejecutable
         hilo.start();
 
-        hilo.join();
+        
+        //Tercer estado, bloquedo o not runnable
+        try{
+            hilo.sleep(1000);
+        }catch(InterruptedException e){
+            System.out.println("Error en el hilo 1" + e);
+        }
+
 
         // Obtener y convertir los resultados a hexadecimal
         byte[] result = hilo.getResult();
         String hexResult = bytesToHex(result);
+
+        //Cuarto estado, muerte o finalizado
+        hilo.stop();
 
         // Imprimir los primeros 100 caracteres del resultado como ejemplo
         System.out.println("Primeros 100 caracteres de PI en hexadecimal:");
