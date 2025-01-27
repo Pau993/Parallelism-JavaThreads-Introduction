@@ -9,8 +9,7 @@ package edu.eci.arsw.threads;
  *
  * @author hcadavid
  */
-public class CountThread extends Thread{
-
+public class CountThread extends Thread {
     private int A;
     private int B;
 
@@ -28,10 +27,9 @@ public class CountThread extends Thread{
         }
 
         System.out.println("Numero entre " + A + " y " + B + ":");
-        for(int i = A + 1; i <= B -1; i++){
+        for(int i = A + 1; i < B; i++){
             System.out.println(i);
         }
         System.out.println("Hilo terminado.");
     }
-
 }

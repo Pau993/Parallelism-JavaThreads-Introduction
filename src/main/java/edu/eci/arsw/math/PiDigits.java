@@ -8,7 +8,7 @@ package edu.eci.arsw.math;
 ///  </summary>
 public class PiDigits {
 
-    private static int DigitsPerSum = 8;
+    static int DigitsPerSum = 8;
     private static double Epsilon = 1e-17;
 
     
@@ -18,33 +18,41 @@ public class PiDigits {
      * @param count The number of digits to return
      * @return An array containing the hexadecimal digits.
      */
-    public static byte[] getDigits(int start, int count) {
-        if (start < 0) {
-            throw new RuntimeException("Invalid Interval");
+    public static byte[] getDigits(int start, int count, int numThreads) {
+        if (start < 0 || count < 0 || numThreads <= 0) {
+            throw new IllegalArgumentException("Invalid parameters");
         }
 
-        if (count < 0) {
-            throw new RuntimeException("Invalid Interval");
+        int chunkSize = count / numThreads;
+        int remainder = count % numThreads;
+
+        PiDigitThread[] threads = new PiDigitThread[numThreads];
+        int currentStart = start;
+        for (int i = 0; i < numThreads; i++) {
+            int currentCount = chunkSize + (i < remainder ? 1 : 0);
+            threads[i] = new PiDigitThread(currentStart, currentCount);
+            threads[i].start();
+            currentStart += currentCount;
         }
-
-        byte[] digits = new byte[count];
-        double sum = 0;
-
-        for (int i = 0; i < count; i++) {
-            if (i % DigitsPerSum == 0) {
-                sum = 4 * sum(1, start)
-                        - 2 * sum(4, start)
-                        - sum(5, start)
-                        - sum(6, start);
-
-                start += DigitsPerSum;
+        for (PiDigitThread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new RuntimeException("Thread interrupted", e);
             }
+        }
+        
+        byte[] result = new byte[count];
+        int index = 0;
 
-            sum = 16 * (sum - Math.floor(sum));
-            digits[i] = (byte) sum;
+        for (PiDigitThread thread : threads) {
+            byte[] partialResult = thread.getDigits();
+            System.arraycopy(partialResult, 0, result, index, partialResult.length);
+            index += partialResult.length;
         }
 
-        return digits;
+        return result;
     }
 
     /// <summary>
@@ -53,7 +61,8 @@ public class PiDigits {
     /// <param name="m"></param>
     /// <param name="n"></param>
     /// <returns></returns>
-    private static double sum(int m, int n) {
+    public static double sum(int m, int n) {
+        // Implementación original
         double sum = 0;
         int d = m;
         int power = n;
@@ -84,7 +93,8 @@ public class PiDigits {
     /// <param name="p"></param>
     /// <param name="m"></param>
     /// <returns></returns>
-    private static int hexExponentModulo(int p, int m) {
+    public static int hexExponentModulo(int p, int m) {
+        // Implementación original
         int power = 1;
         while (power * 2 <= p) {
             power *= 2;
@@ -109,5 +119,4 @@ public class PiDigits {
 
         return result;
     }
-
 }
