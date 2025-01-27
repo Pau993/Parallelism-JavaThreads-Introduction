@@ -1,5 +1,8 @@
 package edu.eci.arsw.math;
 
+import java.util.ArrayList;
+import java.util.List;
+
 ///  <summary>
 ///  An implementation of the Bailey-Borwein-Plouffe formula for calculating hexadecimal
 ///  digits of pi.
@@ -18,7 +21,7 @@ public class PiDigits {
      * @param count The number of digits to return
      * @return An array containing the hexadecimal digits.
      */
-    public static byte[] getDigits(int start, int count) {
+    public static byte[] getDigits(int start, int count, int cantHilos) {
         if (start < 0) {
             throw new RuntimeException("Invalid Interval");
         }
@@ -27,24 +30,42 @@ public class PiDigits {
             throw new RuntimeException("Invalid Interval");
         }
 
+        if (count < 0){
+            throw new RuntimeException("Invalid Interval");
+        }
+
         byte[] digits = new byte[count];
-        double sum = 0;
+        int digitosHilos = count / cantHilos;
+        int digitosSobrantes = count % cantHilos;
 
-        for (int i = 0; i < count; i++) {
-            if (i % DigitsPerSum == 0) {
-                sum = 4 * sum(1, start)
-                        - 2 * sum(4, start)
-                        - sum(5, start)
-                        - sum(6, start);
+        List<MyThread> threads = new ArrayList<>();
+        int currentStart = start;
 
-                start += DigitsPerSum;
+        for(int i =  0; i < cantHilos; i++){
+            int calculoHilos = digitosHilos + (i < digitosSobrantes? 1 : 0);
+            MyThread hilo = new MyThread(currentStart, calculoHilos);
+            threads.add(hilo);
+            hilo.start();
+            currentStart += digitosHilos;
+        }
+
+        for(MyThread hilo : threads){
+            try{
+                hilo.join();
+            }catch(InterruptedException e){
+                System.out.println("Error " + e);
             }
+        }
 
-            sum = 16 * (sum - Math.floor(sum));
-            digits[i] = (byte) sum;
+        int offset = 0;
+        for (MyThread thread : threads) {
+            byte[] partialResult = thread.getResult();
+            System.arraycopy(partialResult, 0, digits, offset, partialResult.length);
+            offset += partialResult.length;
         }
 
         return digits;
+
     }
 
     /// <summary>

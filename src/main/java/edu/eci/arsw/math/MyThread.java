@@ -3,17 +3,19 @@ package edu.eci.arsw.math;
 public class MyThread extends Thread {
     private int start;
     private int count;
+    private int cantHilos;
     private byte[] result;
 
     public MyThread(int start, int count) {
         this.start = start;
         this.count = count;
+        this.count = cantHilos;
     }
 
     @Override
     public void run() {
         // Calcular los dígitos usando PiDigits
-        result = PiDigits.getDigits(start, count);
+        result = PiDigits.getDigits(start, count, cantHilos);
     }
 
     public byte[] getResult() {
@@ -23,13 +25,18 @@ public class MyThread extends Thread {
     public static void main(String[] args){
         int start = 0;
         int count = 1000;
+        int cantHilos = 4;
 
+        byte[] piDigits = PiDigits.getDigits(start, count, cantHilos);
+
+        String hexResult1 = MyThread.bytesToHex(piDigits);
+        System.out.println("Primeros 100 caracteres de PI en hexadecimal:");
+        System.out.println(hexResult1.substring(0, 100));
 
         //Primer estado, creación del hilo
         MyThread hilo = new MyThread(start, count);
         //Segundo estado, estado ejecutable
         hilo.start();
-
         
         //Tercer estado, bloquedo o not runnable
         try{
@@ -38,6 +45,11 @@ public class MyThread extends Thread {
             System.out.println("Error en el hilo 1" + e);
         }
 
+        try{
+            hilo.join();
+        }catch(InterruptedException e){
+                    System.out.println("Error en el hilo" + e);
+        }
 
         // Obtener y convertir los resultados a hexadecimal
         byte[] result = hilo.getResult();
