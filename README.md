@@ -40,9 +40,13 @@ Fragmento de código:
 - Se generan los atributos donde tendra su punto de inicio, la cantidad de dígitos a calcular y el array.
 - El metodo run() se recalcula la suma cada DigitsPerSum iteraciones y se realiza el calculo del dígito hexadecimal.
 3. Haga que la función PiDigits.getDigits() reciba como parámetro adicional un valor N, correspondiente al número de hilos entre los que se va a paralelizar la solución. Haga que dicha función espere hasta que los N hilos terminen de resolver el problema para combinar las respuestas y entonces retornar el resultado. Para esto, revise el método [join](https://docs.oracle.com/javase/tutorial/essential/concurrency/join.html) del API de concurrencia de Java.
-
+- Se realiza la modificación del metodo principal para soportar multiples hilos, calculando tambien el tamaño de cada chunk, con un arreglo para almacenar los hilos, creando e iniciando estos mismos.
+Fragmento de código:
+![image](https://github.com/user-attachments/assets/85ef3466-7ba6-4e64-9568-2b7ab7647742)
 4. Ajuste las pruebas de JUnit, considerando los casos de usar 1, 2 o 3 hilos (este último para considerar un número impar de hilos!)
-
+- En el ajuste de las pruebas unicamente se adecua para los diferentes hilos respectivamente adicionalmente se incluye una salida para ver el proceso de cada uno de los hilos.
+Salida de las pruebas:
+![image](https://github.com/user-attachments/assets/0a535c56-a71b-4df6-86d8-2dc718008798)
 
 **Parte III Evaluación de Desempeño**
 
