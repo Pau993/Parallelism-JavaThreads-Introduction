@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eda180d-f555-4a68-8a08-4e77ba360ee2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThreadsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThreadsMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/eci/arsw/math/PiCalcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/eci/arsw/math/PiCalcTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/Thread.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +23,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2sDg5Cbd3o9f5qdRA93nF8Bzgga" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,15 +36,17 @@
   "keyToString": {
     "Application.CountThreadsMain.executor": "Run",
     "Application.Main.executor": "Run",
-    "JUnit.PiCalcTest.executor": "Coverage",
+    "Application.PiDigitsPerformanceTests.executor": "Run",
+    "JUnit.PiCalcTest.executor": "Run",
     "JUnit.PiCalcTest.piGenTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "git-widget-placeholder": "Manuel",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/felip/TalleARSW"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.PiCalcTest">
+  <component name="RunManager" selected="Application.PiDigitsPerformanceTests">
     <configuration name="CountThreadsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.threads.CountThreadsMain" />
       <module name="PiDigits" />
@@ -64,6 +62,19 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.math.Main" />
+      <module name="PiDigits" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.eci.arsw.math.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PiDigitsPerformanceTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.math.PiDigitsPerformanceTests" />
       <module name="PiDigits" />
       <extension name="coverage">
         <pattern>
@@ -153,6 +164,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PiDigitsPerformanceTests" />
         <item itemvalue="JUnit.PiCalcTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PiCalcTest.piGenTest" />
