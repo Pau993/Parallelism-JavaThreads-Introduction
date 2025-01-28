@@ -17,12 +17,17 @@ Explicación:
 Fragmento de código:
 ![image](https://github.com/user-attachments/assets/1827a4e6-d447-44c4-8075-98d18778c8b8)
 
-3. Complete el método __main__ de la clase CountMainThreads para que:
+2. Complete el método __main__ de la clase CountMainThreads para que:
 	1. Cree 3 hilos de tipo CountThread, asignándole al primero el intervalo [0..99], al segundo [99..199], y al tercero [200..299].
-	2. Inicie los tres hilos con 'start()'.
-	3. Ejecute y revise la salida por pantalla. 
-	4. Cambie el incio con 'start()' por 'run()'. Cómo cambia la salida?, por qué?.
-
+- Se genera el hilo con los valores y se predefinen con los rangos específicos.
+	3. Inicie los tres hilos con 'start()'.
+- Se inicializan los hilos respectivamente.
+	4. Ejecute y revise la salida por pantalla.
+- Salida:
+![image](https://github.com/user-attachments/assets/488d2f13-61aa-44d4-be4a-fa5da5a90481)
+	5. Cambie el incio con 'start()' por 'run()'. Cómo cambia la salida?, por qué?.
+Fragmento de código:
+![image](https://github.com/user-attachments/assets/43fe4cf3-78f2-43db-9b87-805d92022215)
 **Parte II Hilos Java**
 
 La fórmula [BBP](https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula) (Bailey–Borwein–Plouffe formula) es un algoritmo que permite calcular el enésimo dígito de PI en base 16, con la particularidad de no necesitar calcular nos n-1 dígitos anteriores. Esta característica permite convertir el problema de calcular un número masivo de dígitos de PI (en base 16) a uno [vergonzosamente paralelo](https://en.wikipedia.org/wiki/Embarrassingly_parallel). En este repositorio encontrará la implementación, junto con un conjunto de pruebas. 
