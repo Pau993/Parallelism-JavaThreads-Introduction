@@ -27,7 +27,8 @@ Fragmento de código:
 ![image](https://github.com/user-attachments/assets/488d2f13-61aa-44d4-be4a-fa5da5a90481)
 	5. Cambie el incio con 'start()' por 'run()'. Cómo cambia la salida?, por qué?.
 Fragmento de código:
-![image](https://github.com/user-attachments/assets/43fe4cf3-78f2-43db-9b87-805d92022215)
+![image](https://github.com/user-attachments/assets/f0d5f0af-2642-47b5-b42a-92460d66dd89)
+- No existe paralelismo ya que se el código se ejecuta de forma secuencial, el tiempo de ejecución es similar a un solo hilo y se pierde el beneficio de concurrencia.
 **Parte II Hilos Java**
 
 La fórmula [BBP](https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula) (Bailey–Borwein–Plouffe formula) es un algoritmo que permite calcular el enésimo dígito de PI en base 16, con la particularidad de no necesitar calcular nos n-1 dígitos anteriores. Esta característica permite convertir el problema de calcular un número masivo de dígitos de PI (en base 16) a uno [vergonzosamente paralelo](https://en.wikipedia.org/wiki/Embarrassingly_parallel). En este repositorio encontrará la implementación, junto con un conjunto de pruebas. 
