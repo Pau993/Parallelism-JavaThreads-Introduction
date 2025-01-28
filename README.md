@@ -57,6 +57,9 @@ A partir de lo anterior, implemente la siguiente secuencia de experimentos para 
 3. Tantos hilos como el doble de núcleos de procesamiento.
 4. 200 hilos.
 5. 500 hilos.
+- Para la implementación se implementó 'PiDigitsPerformanceTests' donde se verifica el rendimiento con configuraciones variadas de hilos, primero se determina el numero de nucleos del procesador y se define un arreglo con 1 nucleo, doble nucleo, 200 y 500, luego se itera sobre estas configuraciones ejecutando el millón de gígitos hexadecimales de Pi. En cada configuración se mide el tiempo de ejecución con 'System.nanoTime()', convirtiendolo a milisegundos luego se imprimen los resultados con el tiempo total, los primeros y ultimos 10 dígitos hexadecimales, con el metodo 'bytesToHex()' se convierten los bytes a hexadecimal, para la visualización.
+- Fragmento de código:
+![image](https://github.com/user-attachments/assets/1d24380a-6424-48d5-a49f-e634ff976839)
 
 Al iniciar el programa ejecute el monitor jVisualVM, y a medida que corran las pruebas, revise y anote el consumo de CPU y de memoria en cada caso. ![](img/jvisualvm.png)
 
