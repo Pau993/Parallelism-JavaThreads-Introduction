@@ -5,10 +5,8 @@
 #### Paula Natalia Paez Vega
 #### Manuel Felipe Barrera Barrera
 
-### Trabajo individual o en parejas
-
-Entrega: Martes en el transcurso del día.
-Entregar: Fuentes y documento PDF con las respuestas.
+## Introducción
+En el presente repositorio se realiza un analisis de los hilos en Java, estos son unidades ligeras de ejecucion que permiten realizar multiples de manera concurrente dentro de un mismo programa, estos comparten el mismo espacio de memoria del proceso, a la vez que requieren mecanismos de sincronización para evitar problemas en su desarrollo.
 
 **Parte I Hilos Java**
 
