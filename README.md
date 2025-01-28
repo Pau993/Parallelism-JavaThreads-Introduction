@@ -2,8 +2,8 @@
 ### Arquitecturas de Software
 ### Introducción al paralelismo - hilos
 ## Integrantes
-# Paula Natalia Paez Vega
-# Manuel Felipe Barrera Barrera
+#### Paula Natalia Paez Vega
+#### Manuel Felipe Barrera Barrera
 
 ### Trabajo individual o en parejas
 
