@@ -65,18 +65,23 @@ Al iniciar el programa ejecute el monitor jVisualVM, y a medida que corran las p
 - Para realizar el analisis, se modifca el codigo para poder evidenciar en diferentes momentos la cantidad de hilos con la que opera, se redujo a 10000 para poder obtener resultados, ya que con 1.000.000 no procesaba todo.
 - Código modificado:
 ![image](https://github.com/user-attachments/assets/41cb2356-d615-409f-b278-714ad58af3bb)
+
 - 1 hilo:
 ![image](https://github.com/user-attachments/assets/9149aa90-f116-4df1-a7bf-916fde6049d0)
 ![image](https://github.com/user-attachments/assets/20b1ccc7-f800-4470-a1a4-ebd388e83b93)
+
 - 16 hilos (nucleos de procesamiento)
 ![image](https://github.com/user-attachments/assets/22aa7692-6a23-4eab-8ea7-644e05cb1ae9)
 ![image](https://github.com/user-attachments/assets/6181d088-7d24-4577-a80c-41297431abe4)
+
 - 32 hilos
 ![image](https://github.com/user-attachments/assets/3e67cdc6-1b09-49ff-ab32-ce035bde70fd)
 ![image](https://github.com/user-attachments/assets/780a5ee7-86d9-4202-aab4-973162fa9ce8)
+
 - 200 hilos
 ![image](https://github.com/user-attachments/assets/6cafd32a-0668-44c3-afb5-75138f353923)
 ![image](https://github.com/user-attachments/assets/92934f92-0068-42d0-826b-f80e206f0a5a)
+
 - 500 hilos
 ![image](https://github.com/user-attachments/assets/f442dc8e-1aa5-49ae-8f32-30927ca968cf)
 ![image](https://github.com/user-attachments/assets/dce91da6-31b2-48c8-9901-7299ecd14c4d)
