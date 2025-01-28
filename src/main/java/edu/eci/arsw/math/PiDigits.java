@@ -19,15 +19,21 @@ public class PiDigits {
      * @return An array containing the hexadecimal digits.
      */
     public static byte[] getDigits(int start, int count, int numThreads) {
+        
+        System.out.println("Calculando dígitos de PI con parámetros: start=" + start + ", count=" + count + ", cantHilos=" + count);
+
+        
         if (start < 0 || count < 0 || numThreads <= 0) {
             throw new IllegalArgumentException("Invalid parameters");
         }
+
 
         int chunkSize = count / numThreads;
         int remainder = count % numThreads;
 
         PiDigitThread[] threads = new PiDigitThread[numThreads];
         int currentStart = start;
+        
         for (int i = 0; i < numThreads; i++) {
             int currentCount = chunkSize + (i < remainder ? 1 : 0);
             threads[i] = new PiDigitThread(currentStart, currentCount);
