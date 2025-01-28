@@ -1,6 +1,9 @@
 ## Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software
 ### Introducción al paralelismo - hilos
+## Integrantes
+# Paula Natalia Paez Vega
+# Manuel Felipe Barrera Barrera
 
 ### Trabajo individual o en parejas
 
@@ -10,7 +13,13 @@ Entregar: Fuentes y documento PDF con las respuestas.
 **Parte I Hilos Java**
 
 1. De acuerdo con lo revisado en las lecturas, complete las clases CountThread, para que las mismas definan el ciclo de vida de un hilo que imprima por pantalla los números entre A y B.
-2. Complete el método __main__ de la clase CountMainThreads para que:
+Explicación:
+- En el constructor se reciben los limites A y B (A inferior del rango, B superior del rango) y se permite crear un hilo con un rango de numeros específico.
+- En el método 'run()' se sobrescribe el método de la clase 'Thread', si A es mayor que B, intercambia los valores, imprime los números entre A y B (excluyendo estos mismos).
+Fragmento de código:
+![image](https://github.com/user-attachments/assets/1827a4e6-d447-44c4-8075-98d18778c8b8)
+
+3. Complete el método __main__ de la clase CountMainThreads para que:
 	1. Cree 3 hilos de tipo CountThread, asignándole al primero el intervalo [0..99], al segundo [99..199], y al tercero [200..299].
 	2. Inicie los tres hilos con 'start()'.
 	3. Ejecute y revise la salida por pantalla. 
