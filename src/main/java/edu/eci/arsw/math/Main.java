@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class Main {
 
-    public static void main(String a[]) {
+    public static void main(String[] a) {
         System.out.println(bytesToHex(PiDigits.getDigits(0, 10, 4)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 100, 4)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000, 4)));

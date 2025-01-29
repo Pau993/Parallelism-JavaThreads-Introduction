@@ -4,43 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eda180d-f555-4a68-8a08-4e77ba360ee2" name="Changes" comment="">
+    <list default="true" id="4b8cdf9d-b51d-4ec0-97bd-e848269b8f9a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigitThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigitThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigitsPerformanceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigitsPerformanceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThreadsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThreadsMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/MyThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/eci/arsw/math/PiCalcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/eci/arsw/math/PiCalcTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2sDg5Cbd3o9f5qdRA93nF8Bzgga" />
+  <component name="ProjectId" id="2sHtokjN2LfeRKSHdLoKz2XWGyI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.CountThreadsMain.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.MyThread.executor": "Run",
     "Application.PiDigitsPerformanceTests.executor": "Run",
     "JUnit.PiCalcTest.executor": "Run",
-    "JUnit.PiCalcTest.piGenTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Manuel",
@@ -49,12 +44,12 @@
   }
 }]]></component>
   <component name="RunManager" selected="Application.PiDigitsPerformanceTests">
-    <configuration name="CountThreadsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.threads.CountThreadsMain" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.math.Main" />
       <module name="PiDigits" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.eci.arsw.threads.*" />
+          <option name="PATTERN" value="edu.eci.arsw.math.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -62,8 +57,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.math.Main" />
+    <configuration name="MyThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.math.MyThread" />
       <module name="PiDigits" />
       <extension name="coverage">
         <pattern>
@@ -103,35 +98,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PiCalcTest.piGenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PiDigits" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.eci.arsw.math.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.eci.arsw.math" />
-      <option name="MAIN_CLASS_NAME" value="edu.eci.arsw.math.PiCalcTest" />
-      <option name="METHOD_NAME" value="piGenTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
-      <module name="Parallelism-JavaThreads-Introduction" />
+      <module name="TalleARSW" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Parallelism-JavaThreads-Introduction" />
+      <module name="TalleARSW" />
       <option name="filePath" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="Parallelism-JavaThreads-Introduction" />
+      <module name="TalleARSW" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,7 +132,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="Parallelism-JavaThreads-Introduction" />
+      <module name="TalleARSW" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -168,41 +147,20 @@
       <list>
         <item itemvalue="Application.PiDigitsPerformanceTests" />
         <item itemvalue="JUnit.PiCalcTest" />
-        <item itemvalue="Application.CountThreadsMain" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PiCalcTest.piGenTest" />
+        <item itemvalue="Application.MyThread" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9eda180d-f555-4a68-8a08-4e77ba360ee2" name="Changes" comment="" />
-      <created>1737995378077</created>
+      <changelist id="4b8cdf9d-b51d-4ec0-97bd-e848269b8f9a" name="Changes" comment="" />
+      <created>1738124504312</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1737995378077</updated>
+      <updated>1738124504312</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/Main.java</url>
-          <line>15</line>
-          <properties class="edu.eci.arsw.math.Main" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Parallelism_JavaThreads_Introduction$PiCalcTest.ic" NAME="PiCalcTest Coverage Results" MODIFIED="1737997322710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>edu.eci.arsw.math.*</FILTER>
-    </SUITE>
   </component>
 </project>
