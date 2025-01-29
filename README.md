@@ -2,7 +2,6 @@
 ### Arquitecturas de Software
 ### Introducción al paralelismo - hilos
 ## Integrantes
-#### Paula Natalia Paez Vega
 #### Manuel Felipe Barrera Barrera
 
 ## Introducción
