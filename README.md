@@ -111,10 +111,6 @@ Con lo anterior y los tiempos de ejecución dados, se realiza una gráfica de ti
 3. **Uso de múltiples máquinas**:
    - Ejecutar 500 hilos en una máquina no es eficiente. Utilizar múltiples máquinas distribuyendo el trabajo puede mejorar el rendimiento.
 
-## Conclusiones
-La paralelización en Java es eficiente hasta cierto punto, donde se deben considerar las limitaciones del hardware. El uso correcto de hilos puede mejorar considerablemente el rendimiento, pero un exceso puede generar ineficiencias debido a la sobrecarga en la gestión de recursos. La ley de Amdahl es crucial para entender estas dinámicas en el contexto del paralelismo.
-
-
 #### Criterios de evaluación.
 
 1. Funcionalidad:
