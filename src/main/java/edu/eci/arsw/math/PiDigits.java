@@ -68,7 +68,6 @@ public class PiDigits {
     /// <param name="n"></param>
     /// <returns></returns>
     public static double sum(int m, int n) {
-        // Implementación original
         double sum = 0;
         int d = m;
         int power = n;
@@ -100,7 +99,6 @@ public class PiDigits {
     /// <param name="m"></param>
     /// <returns></returns>
     public static int hexExponentModulo(int p, int m) {
-        // Implementación original
         int power = 1;
         while (power * 2 <= p) {
             power *= 2;

@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9eda180d-f555-4a68-8a08-4e77ba360ee2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/Thread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigitsPerformanceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/math/PiDigitsPerformanceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThreadsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/threads/CountThreadsMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,9 +168,9 @@
       <list>
         <item itemvalue="Application.PiDigitsPerformanceTests" />
         <item itemvalue="JUnit.PiCalcTest" />
+        <item itemvalue="Application.CountThreadsMain" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PiCalcTest.piGenTest" />
-        <item itemvalue="Application.CountThreadsMain" />
       </list>
     </recent_temporary>
   </component>
