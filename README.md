@@ -2,8 +2,8 @@
 ### Arquitecturas de Software
 ### Introducción al paralelismo - hilos
 ## Integrantes
-##### Paula Natalia Paez Vega
-##### Manuel Felipe Barrera Barrera
+#### Paula Natalia Paez Vega
+#### Manuel Felipe Barrera Barrera
 
 ## Introducción
 En el presente repositorio se realiza un análisis de los hilos en Java. Estos son unidades ligeras de ejecución que permiten realizar múltiples tareas de manera concurrente dentro de un mismo programa. Comparten el mismo espacio de memoria del proceso, requiriendo mecanismos de sincronización para evitar problemas en su desarrollo.
