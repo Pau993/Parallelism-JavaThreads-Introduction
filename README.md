@@ -103,7 +103,7 @@ Al iniciar el programa, ejecute el monitor jVisualVM y anote el consumo de CPU y
 Con lo anterior y los tiempos de ejecución dados, se realiza una gráfica de tiempo de solución vs. número de hilos.
 
 **Gráfica tiempo de solución vs. número de hilos**:
-![image](https://github.com/user-attachments/assets/50093396-f49d-498f-9cca-338779f58e4b)
+- ![image](https://github.com/user-attachments/assets/50093396-f49d-498f-9cca-338779f58e4b)
 
 ### Análisis de Resultados
 
