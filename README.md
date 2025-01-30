@@ -1,12 +1,61 @@
-## Escuela Colombiana de Ingeniería
-### Arquitecturas de Software
-### Introducción al paralelismo - hilos
-## Integrantes
-#### Paula Natalia Paez Vega
-#### Manuel Felipe Barrera Barrera
+# ntroducción al paralelismo - hilos
 
-## Introducción
 En el presente repositorio se realiza un análisis de los hilos en Java. Estos son unidades ligeras de ejecución que permiten realizar múltiples tareas de manera concurrente dentro de un mismo programa. Comparten el mismo espacio de memoria del proceso, requiriendo mecanismos de sincronización para evitar problemas en su desarrollo.
+
+Páginas HTML
+Archivos JavaScript
+Hojas de estilo CSS
+Imágenes
+Este ejercicio permitirá comprender cómo un servidor procesa peticiones y sirve contenido estático de manera eficiente.
+
+## Comenzando 🚀
+
+Las siguientes instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
+
+### Requisitos ⚙️
+
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME]([https://rometools.github.io/rome/](https://html5boilerplate.com/) - Used to generate RSS Feeds
+* [JQery]([https://maven.apache.org/](https://jquery.com/) - Dependency Management
+* [JavaScript]([https://html5boilerplate.com/](https://nodejs.org/)) - Used to generate RSS Feeds
+
+```
+Give examples
+```
+
+### Instalación 📦
+
+Realice los siguientes pasos para clonar el proyecto en su máquina local.
+
+```
+git clone https://github.com/Pau993/TalleARSW.git
+cd AREP/
+git checkout Taller01
+```
+
+### Ejecutando la aplicación ⚙️
+
+Para ejecutar la aplicación, ejecute el siguiente comando:
+
+```
+mvn clean compile
+mvn exec:java '-Dexec.mainClass=edu.eci.arep.App'
+```
+
+El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
+
+Diríjase a su navegador de preferencia y vaya a la siguiente dirección: http://localhost:35000/ para ver la aplicación en funcionamiento.
+
+## Ejecutando las pruebas ⚙️
+
+Para ejecutar las pruebas, ejecute el siguiente comando:
+
+```
+mvn test
+```
+
+
+## Descripción de la aplicación 📖
 
 **Parte I: Hilos en Java**
 
@@ -70,32 +119,32 @@ A partir de lo anterior, implemente la siguiente secuencia de experimentos para 
 
 Al iniciar el programa, ejecute el monitor jVisualVM y anote el consumo de CPU y de memoria en cada caso.
 
-- **Código modificado**:
+* **Código modificado**:
   ![image](https://github.com/user-attachments/assets/41cb2356-d615-409f-b278-714ad58af3bb)
 
 **Resultados de Ejecución**:
 
-- **1 hilo**:
+* **1 hilo**:
   
   ![image](https://github.com/user-attachments/assets/9149aa90-f116-4df1-a7bf-916fde6049d0)
   ![image](https://github.com/user-attachments/assets/20b1ccc7-f800-4470-a1a4-ebd388e83b93)
 
-- **16 hilos (núcleos de procesamiento)**:
+* **16 hilos (núcleos de procesamiento)**:
   
   ![image](https://github.com/user-attachments/assets/22aa7692-6a23-4eab-8ea7-644e05cb1ae9)
   ![image](https://github.com/user-attachments/assets/6181d088-7d24-4577-a80c-41297431abe4)
 
-- **32 hilos**:
+* **32 hilos**:
   
   ![image](https://github.com/user-attachments/assets/3e67cdc6-1b09-49ff-ab32-ce035bde70fd)
   ![image](https://github.com/user-attachments/assets/780a5ee7-86d9-4202-aab4-973162fa9ce8)
 
-- **200 hilos**:
+* **200 hilos**:
   
   ![image](https://github.com/user-attachments/assets/6cafd32a-0668-44c3-afb5-75138f353923)
   ![image](https://github.com/user-attachments/assets/92934f92-0068-42d0-826b-f80e206f0a5a)
 
-- **500 hilos**:
+* **500 hilos**:
   
   ![image](https://github.com/user-attachments/assets/f442dc8e-1aa5-49ae-8f32-30927ca968cf)
   ![image](https://github.com/user-attachments/assets/dce91da6-31b2-48c8-9901-7299ecd14c4d)
@@ -103,7 +152,7 @@ Al iniciar el programa, ejecute el monitor jVisualVM y anote el consumo de CPU y
 Con lo anterior y los tiempos de ejecución dados, se realiza una gráfica de tiempo de solución vs. número de hilos.
 
 **Gráfica tiempo de solución vs. número de hilos**:
-- ![image](https://github.com/user-attachments/assets/50093396-f49d-498f-9cca-338779f58e4b)
+* ![image](https://github.com/user-attachments/assets/50093396-f49d-498f-9cca-338779f58e4b)
 
 ### Análisis de Resultados
 
@@ -116,16 +165,10 @@ Con lo anterior y los tiempos de ejecución dados, se realiza una gráfica de ti
 3. **Uso de múltiples máquinas**:
    - Ejecutar 500 hilos en una máquina no es eficiente. Utilizar múltiples máquinas distribuyendo el trabajo puede mejorar el rendimiento.
 
-#### Criterios de evaluación.
+## Autores ✒️
 
-1. Funcionalidad:
-	- El problema fue paralelizado (el tiempo de ejecución se reduce y el uso de los núcleos aumenta), y permite parametrizar el número de hilos usados simultáneamente.
+* **Paula Natalia Paez Vega y Manuel Felipe Barrera Barrera* - *Initial work* - [PurpleBooth](https://github.com/Paulinguis993)
 
-2. Diseño:
-	- La signatura del método original sólo fue modificada con el parámetro original, y en el mismo debe quedar encapsulado la paralelización e inicio de la solución, y la sincronización de la finalización de la misma.
-	- Las nuevas pruebas con sólo UN hilo deben ser exactamente iguales a las originales, variando sólo el parámetro adicional. Se incluyeron pruebas con hilos adicionales, y las mismas pasan.
-	- Se plantea un método eficiente para combinar los resultados en el orden correcto (iterar sobre cada resultado NO sera eficiente).
+## Licencia 📄
 
-3. Análisis.
-	- Se deja evidencia de la realización de los experimentos.
-	- Los análisis realizados son consistentes.
+This project is licensed under the MIT License - see the [LIC
