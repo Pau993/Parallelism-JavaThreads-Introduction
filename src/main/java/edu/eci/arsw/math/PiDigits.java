@@ -11,7 +11,7 @@ import java.util.List;
 ///  </summary>
 public class PiDigits {
 
-    private static int DigitsPerSum = 8;
+    static int DigitsPerSum = 8;
     private static double Epsilon = 1e-17;
 
     
@@ -21,51 +21,47 @@ public class PiDigits {
      * @param count The number of digits to return
      * @return An array containing the hexadecimal digits.
      */
-    public static byte[] getDigits(int start, int count, int cantHilos) {
-        if (start < 0) {
-            throw new RuntimeException("Invalid Interval");
+      public static byte[] getDigits(int start, int count, int numThreads) {
+        
+        System.out.println("Calculando dígitos de PI con parámetros: start=" + start + ", count=" + count + ", cantHilos=" + count);
+      }
+
+        
+        if (start < 0 || count < 0 || numThreads <= 0) {
+            throw new IllegalArgumentException("Invalid parameters");
         }
 
-        if (count < 0) {
-            throw new RuntimeException("Invalid Interval");
-        }
+        int chunkSize = count / numThreads;
+        int remainder = count % numThreads;
 
-        if (count < 0){
-            throw new RuntimeException("Invalid Interval");
-        }
-
-        byte[] digits = new byte[count];
-        int digitosHilos = count / cantHilos;
-        int digitosSobrantes = count % cantHilos;
-
-        List<MyThread> threads = new ArrayList<>();
+        PiDigitThread[] threads = new PiDigitThread[numThreads];
         int currentStart = start;
-
-        for(int i =  0; i < cantHilos; i++){
-            int calculoHilos = digitosHilos + (i < digitosSobrantes? 1 : 0);
-            MyThread hilo = new MyThread(currentStart, calculoHilos);
-            threads.add(hilo);
-            hilo.start();
-            currentStart += digitosHilos;
+        
+        for (int i = 0; i < numThreads; i++) {
+            int currentCount = chunkSize + (i < remainder ? 1 : 0);
+            threads[i] = new PiDigitThread(currentStart, currentCount);
+            threads[i].start();
+            currentStart += currentCount;
         }
-
-        for(MyThread hilo : threads){
-            try{
-                hilo.join();
-            }catch(InterruptedException e){
-                System.out.println("Error " + e);
+        for (PiDigitThread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new RuntimeException("Thread interrupted", e);
             }
         }
+        
+        byte[] result = new byte[count];
+        int index = 0;
 
-        int offset = 0;
-        for (MyThread thread : threads) {
-            byte[] partialResult = thread.getResult();
-            System.arraycopy(partialResult, 0, digits, offset, partialResult.length);
-            offset += partialResult.length;
+        for (PiDigitThread thread : threads) {
+            byte[] partialResult = thread.getDigits();
+            System.arraycopy(partialResult, 0, result, index, partialResult.length);
+            index += partialResult.length;
         }
 
-        return digits;
-
+        return result;
     }
 
     /// <summary>
@@ -74,7 +70,7 @@ public class PiDigits {
     /// <param name="m"></param>
     /// <param name="n"></param>
     /// <returns></returns>
-    private static double sum(int m, int n) {
+    public static double sum(int m, int n) {
         double sum = 0;
         int d = m;
         int power = n;
@@ -105,7 +101,7 @@ public class PiDigits {
     /// <param name="p"></param>
     /// <param name="m"></param>
     /// <returns></returns>
-    private static int hexExponentModulo(int p, int m) {
+    public static int hexExponentModulo(int p, int m) {
         int power = 1;
         while (power * 2 <= p) {
             power *= 2;
@@ -130,5 +126,4 @@ public class PiDigits {
 
         return result;
     }
-
 }

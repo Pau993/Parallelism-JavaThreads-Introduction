@@ -15,13 +15,10 @@ import edu.eci.arsw.threads.CountThread;
  */
 public class Main {
 
-    public static void main(String a[]) {
-        System.out.println(bytesToHex(PiDigits.getDigits(0, 10, 2)));
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 100, 43)));
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000, 5)));
-
-
-
+    public static void main(String[] a) {
+        System.out.println(bytesToHex(PiDigits.getDigits(0, 10, 4)));
+        System.out.println(bytesToHex(PiDigits.getDigits(1, 100, 4)));
+        System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000, 4)));
     }
 
     private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
