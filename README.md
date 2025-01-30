@@ -140,8 +140,8 @@ Con lo anterior y los tiempos de ejecución dados, se realiza una gráfica de ti
 
 ## Autores ✒️
 
-* **Paula Natalia Paez Vega y Manuel Felipe Barrera Barrera* - *Initial work* - [PurpleBooth](https://github.com/Paulinguis993)
+* **Paula Natalia Paez Vega y Manuel Felipe Barrera Barrera*
 
 ## Licencia 📄
 
-This project is licensed under the MIT License - see the [LIC
+This project is licensed under the MIT License
