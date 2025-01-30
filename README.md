@@ -1,4 +1,4 @@
-# ntroducción al paralelismo - hilos
+# Introducción al paralelismo - hilos
 
 En el presente repositorio se realiza un análisis de los hilos en Java. Estos son unidades ligeras de ejecución que permiten realizar múltiples tareas de manera concurrente dentro de un mismo programa. Comparten el mismo espacio de memoria del proceso, requiriendo mecanismos de sincronización para evitar problemas en su desarrollo.
 
@@ -14,10 +14,7 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 
 ### Requisitos ⚙️
 
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME]([https://rometools.github.io/rome/](https://html5boilerplate.com/) - Used to generate RSS Feeds
-* [JQery]([https://maven.apache.org/](https://jquery.com/) - Dependency Management
-* [JavaScript]([https://html5boilerplate.com/](https://nodejs.org/)) - Used to generate RSS Feeds
+* [Java](https://www.java.com/es/) - Desarrollo
 
 ```
 Give examples
@@ -30,16 +27,7 @@ Realice los siguientes pasos para clonar el proyecto en su máquina local.
 ```
 git clone https://github.com/Pau993/TalleARSW.git
 cd AREP/
-git checkout Taller01
-```
-
-### Ejecutando la aplicación ⚙️
-
-Para ejecutar la aplicación, ejecute el siguiente comando:
-
-```
-mvn clean compile
-mvn exec:java '-Dexec.mainClass=edu.eci.arep.App'
+git checkout TalleARSW
 ```
 
 El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
