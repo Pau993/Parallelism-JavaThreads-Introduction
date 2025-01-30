@@ -27,8 +27,6 @@ git checkout TalleARSW
 
 El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
 
-Diríjase a su navegador de preferencia y vaya a la siguiente dirección: http://localhost:35000/ para ver la aplicación en funcionamiento.
-
 ## Ejecutando las pruebas ⚙️
 
 Para ejecutar las pruebas, ejecute el siguiente comando:
