@@ -16,10 +16,6 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 
 * [Java](https://www.java.com/es/) - Desarrollo
 
-```
-Give examples
-```
-
 ### Instalación 📦
 
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
