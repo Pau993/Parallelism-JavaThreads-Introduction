@@ -7,6 +7,8 @@ package edu.eci.arsw.math;
 
 import java.util.Arrays;
 
+import edu.eci.arsw.threads.CountThread;
+
 /**
  *
  * @author hcadavid

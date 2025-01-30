@@ -76,7 +76,8 @@ public class PiCalcTest {
                 assertEquals(count, digits.length);
 
                 for (int i = 0; i < digits.length; i++) {
-                    assertEquals(expected[start + i], digits[i]);
+                    assertEquals("El dígito no coincide en posición " + (start + i),
+                            expected[start + i], digits[i]);
                 }
             }
         }

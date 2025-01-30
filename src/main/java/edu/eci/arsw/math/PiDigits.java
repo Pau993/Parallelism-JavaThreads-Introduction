@@ -1,5 +1,8 @@
 package edu.eci.arsw.math;
 
+import java.util.ArrayList;
+import java.util.List;
+
 ///  <summary>
 ///  An implementation of the Bailey-Borwein-Plouffe formula for calculating hexadecimal
 ///  digits of pi.
@@ -18,15 +21,15 @@ public class PiDigits {
      * @param count The number of digits to return
      * @return An array containing the hexadecimal digits.
      */
-    public static byte[] getDigits(int start, int count, int numThreads) {
+      public static byte[] getDigits(int start, int count, int numThreads) {
         
         System.out.println("Calculando dígitos de PI con parámetros: start=" + start + ", count=" + count + ", cantHilos=" + count);
+      }
 
         
         if (start < 0 || count < 0 || numThreads <= 0) {
             throw new IllegalArgumentException("Invalid parameters");
         }
-
 
         int chunkSize = count / numThreads;
         int remainder = count % numThreads;
