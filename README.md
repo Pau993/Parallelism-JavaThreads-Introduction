@@ -26,7 +26,6 @@ Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```
 git clone https://github.com/Pau993/TalleARSW.git
-cd AREP/
 git checkout TalleARSW
 ```
 
