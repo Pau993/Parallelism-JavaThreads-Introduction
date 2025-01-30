@@ -27,14 +27,6 @@ git checkout TalleARSW
 
 El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
 
-## Ejecutando las pruebas ⚙️
-
-Para ejecutar las pruebas, ejecute el siguiente comando:
-
-```
-mvn test
-```
-
 
 ## Descripción de la aplicación 📖
 
